@@ -1,0 +1,27 @@
+// Create json to compile cpp source files
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile C++",
+      "type": "shell",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceRoot}/main.cpp",
+        "${workspaceRoot}/includes/Atm.cpp",
+        "-o",
+        "${workspaceRoot}/main"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": false,
+      "presentation": {
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
