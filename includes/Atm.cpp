@@ -10,12 +10,11 @@ using namespace std;
 
 int random(int min, int max) {
   static bool first = true;
-  if (first) 
-  {  
-    srand( time(NULL) );
+  if (first) {
+    srand(time(NULL));
     first = false;
   }
-  return min + rand() % (( max + 1 ) - min);
+  return min + rand() % ((max + 1) - min);
 }
 
 ATM::ATM() {
@@ -26,8 +25,6 @@ ATM::ATM() {
 }
 
 void ATM::createAccount(string name, int pin) {
-  srand(time(NULL));
-
   int accNumber = random(10000000, 99999999);
 
   try {
