@@ -1,4 +1,3 @@
-// Create json to compile cpp source files
 {
   "version": "2.0.0",
   "tasks": [
